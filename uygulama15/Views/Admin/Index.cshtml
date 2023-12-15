@@ -1,0 +1,27 @@
+﻿@model List<uygulama15.Models.admin>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+<a href="~/Admin/Create" class="btn btn-warning">Yeni Kayıt</a>
+<table class="table table-striped">
+<tr>
+        <td>Kullanıcı Adı</td>
+        <td>Şifresi</td>
+        <td>Düzelt</td>
+        <td>Silme</td>
+</tr>
+@foreach (var item in Model)
+{
+<tr>
+    <td>@item.users</td>
+    <td>@item.passwords</td>
+    <td><a class="btn btn-primary" href="">Düzelt</a></td>
+    <td><a class="btn btn-success" href="">Silme</a></td>
+</tr>
+
+}
+
+</table>
